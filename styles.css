@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Landing Page */
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.active-slide {
+    display: block;
+    position: relative;
+
+}
+
+/* Animation for fading */
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframe for fade in and out */
+@keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .landing-page {
+        height: auto;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        }
+
+    .slideshow-container {
+         height: auto;
+         margin: 0; /* Remove any margin */
+        padding: 0; /* Remove any padding */
+        }
+
+    .slide img {
+        background-color: #333;
+        object-fit: contain;
+        height: auto;
+        width: 100%;
+        margin: 0; /* Remove any margin */
+        padding: 0; /* Remove any padding */
+        }
+    }
+
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #4a90e2;
+}
+
+/* Vision and Mission Section */
+#vision-mission {
+    position: relative;
+    background: url('your-background-image.jpg') center center/cover no-repeat;
+    padding: 60px 20px;
+    color: white;
+}
+/* Semi-transparent overlay to reduce background image opacity */
+#vision-mission .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* White overlay with 80% opacity */
+    z-index: 1;
+}
+#vision-mission .container {
+    position: relative;
+    z-index: 2; /* Bring content in front of the overlay */
+}
+#vision-mission .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#vision-mission .text {
+    z-index: 2;
+    flex: 1;
+    margin-right: 20px;
+}
+
+#vision-mission .text h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#vision-mission .text p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+/* Animation for Text */
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay the animation for each text element */
+.animated-text:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.animated-text:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.animated-text:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+#vision-mission .image {
+    flex: 1;
+}
+
+#vision-mission .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Programs Section with Background Image */
+#upcoming-program {
+            position: relative;
+            background-image: url('programs-background.jpg'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: white; /* Ensure text is visible */
+            z-index: 1;
+        }
+
+        /* Add an overlay to dim the background */
+        #upcoming-program::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency level here */
+            z-index: -1; /* Keep it behind the content */
+        }
+
+        .program-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .program-item {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for programs */
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            color: #333; /* Text color to contrast background */
+        }
+
+        .program-item h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .register-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Ensure the text is clear and readable on mobile */
+        @media (max-width: 768px) {
+            .program-item {
+                width: calc(100% - 40px); /* Full width on mobile with margin */
+            }
+        }
+
+/* New Here Section */
+#new-here {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Button Styles */
+        .join-us-btn {
+            background-color: #f0ec10; /* Button background color */
+            color: white; /* Text color */
+            padding: 15px 30px; /* Button padding */
+            border: none;
+            border-radius: 30px; /* Rounded corners */
+            font-size: 1.2rem; /* Text size */
+            font-weight: bold; /* Bold text */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: all 0.3s ease; /* Smooth transition on hover */
+            text-transform: uppercase; /* Capitalize all letters */
+            text-decoration: none; /* Remove underline if it's a link */
+            display: inline-block;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        /* Button Hover Effect */
+        .join-us-btn:hover {
+            background-color: #2442c9; /* Slightly darker on hover */
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+            transform: translateY(-3px); /* Lift the button up */
+        }
+
+        /* Responsive Button for Mobile */
+        @media (max-width: 768px) {
+            .join-us-btn {
+                padding: 12px 25px; /* Adjust padding on smaller screens */
+                font-size: 1rem; /* Slightly smaller font size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .join-us-btn {
+                padding: 10px 20px; /* Further adjustment for mobile */
+                font-size: 0.9rem; /* Even smaller font size for smaller devices */
+            }
+        }
+
+#new-here p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+ /* Testimonial Section */
+ /* Testimonial Section */
+ #testimonials {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content; /* Allow the container to grow as wide as it needs */
+    animation: slide 10s linear infinite; /* Continuous sliding animation */
+}
+
+.testimonial-item {
+    min-width: 33.3333%; /* For 3 testimonials on larger screens */
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    direction: ltr; /* Keeps text content in the regular left-to-right flow */
+}
+
+.testimonial-item p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.testimonial-item h4 {
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+/* Keyframes for continuous sliding */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* Start at the initial position */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left by 100% */
+    }
+}
+
+/* Wrapper for hiding overflowing testimonials */
+.testimonial-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .testimonials-container {
+        animation: slide 10s linear infinite; /* Slow down the animation for mobile */
+    }
+    .testimonial-item {
+        min-width: 20%; /* 2 testimonials per slide for mobile view */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-container {
+        animation: slide 10s linear infinite; /* Slow down the animation for mobile */
+    }
+    .testimonial-item {
+        min-width: 20%; /* 1 testimonial per slide on smaller screens */
+    }
+}
+
+/* Contact Us Section */
+.contact-box {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #4a90e2;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for Social Media Icons */
+.social-media .social-icon {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #4a90e2;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.social-media .social-icon:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.social-media .social-icon:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.social-media .social-icon:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.social-media .social-icon:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* Give Section */
+.give-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.give-section h2 {
+    color: #4a90e2;
+}
+
+.account-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

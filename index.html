@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/jpg" href="vision2.png">
+    <title>CEPHzone2Teens/Youths</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Landing Page with Background Image -->
+    <!-- Landing Page with Slideshow -->
+<header class="landing-page">
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="image1.jpg" style="width:100%">
+        </div>
+        <div class="slide fade">
+            <img src="image2.jpg" style="width:100%">
+        </div>
+        <div class="slide fade">
+            <img src="image3.jpg" style="width:100%">
+        </div>
+    </div>
+</header>
+
+
+    <!-- Vision and Mission Section -->
+    <section id="vision-mission">
+        <div class="background-overlay"></div>
+        <div class="container">
+            <div class="section-title">
+                <h2 class="animated-text">Our Vision & Mission</h2>
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h3 class="animated-text">Our Vision</h3>
+                    <p class="animated-text">Taking the divne presence of God to the nations and peoples of the world and demonstrating the character of the spirit.</p>
+                    <h3 class="animated-text">Our Mission</h3>
+                    <p class="animated-text">Raising generations of men and women who will come into their inheritance to fulfill God's dream.</p>
+                </div>
+                <div class="image">
+                    <img src="vision.png" alt="Youth Church Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Programs Section -->
+    <section id="upcoming-program">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Programs</h2>
+            </div>
+            <div class="program-list">
+                <div class="program-item">
+                    <h3>Youth Conference</h3>
+                    <p>Date: October 12, 2024</p>
+                    <a href="https://www.kingsforms.online/youthconference" class="register-link">Register Now</a>
+                </div>
+                <div class="program-item">
+                    <h3>ITPLC</h3>
+                    <p>Date: November, 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Here Section -->
+    <section id="new-here">
+        <div class="container">
+            <h2>About The Youth Conference</h2>
+            <p>Youth Conference is a conference that is aimed at empowering, equipping and inspiring young people with the right knowledge for global leadership, to fulfill their purposes, to boldly spread the gospel and to become more relevant, effective and efficient in ministry. 
+                It features Plenary sessions on nation building and career development, spoken word, dance, music etc.</p>
+            <a href="https://www.kingsforms.online/youthconference" class="join-us-btn">Register</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="section-title">
+            <h2>Expectations</h2>
+        </div>
+        <div class="testimonial-wrapper">
+            <div class="testimonials-container" id="testimonialsContainer">
+                <!-- 30 Testimonials (example data) -->
+                <div class="testimonial-item">
+                    <p>"I'm looking forward to connecting with youths from different places."</p>
+                    <h4>- Success E.</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"I'm looking forward to a very high lifting moment of worship and fellowship with fellow youths."</p>
+                    <h4>- Ceejay J.</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"I want to be uplifted and be invigorated with fresh fire."</p>
+                    <h4>- Precious C.</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"I expect a massive blow of miracles, signs and wonders in the program. "</p>
+                    <h4>- Confidence B.</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Looking forward to connecting with people and learning from the zonal director."</p>
+                    <h4>- Victory I.</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Wow..... After this conference my church is growing speedily, with more first timer"</p>
+                    <h4>- Solo P.</h4>
+                </div>
+                
+                <!-- Add more testimonials as needed up to 30 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-box">
+                <h3>Contact Us</h3>
+                <p>Email: teensyouthchurchchristembassy@gmail.                                                                                  com<br>Phone: +234 708 440 6365</p>
+            </div>
+            <div class="social-media">
+                <a href="https://wa.link/x784a2" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/cear_yc?igsh=cW0xOGk5ZGs4aDNpouthchurch" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Give Section -->
+    <section id="give" class="give-section">
+        <h2>Give for the Program</h2>
+        <p>Your generous contributions help us to grow and reach more people. Please find the account details below for your seed:</p>
+        <div class="account-info">
+            <p>Bank Name: Parallex Bank
+            </p>
+            <p>Account Number: 2070027805
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Jacobs Ceejay. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+
+        // JavaScript for Sliding Testimonials from Right to Left
+        const testimonialsContainer = document.getElementById('testimonialsContainer');
+        const testimonialItems = document.querySelectorAll('.testimonial-item');
+        let currentIndex = 0;
+        const totalTestimonials = testimonialItems.length;
+
+        // Determine the number of visible testimonials per screen width
+        function getVisibleTestimonials() {
+            if (window.innerWidth <= 480) {
+                return 1; // 1 at a time on small screens
+            } else if (window.innerWidth <= 768) {
+                return 2; // 2 at a time on medium screens
+            } else {
+                return 3; // 3 at a time on large screens
+            }
+        }
+
+        function slideTestimonials() {
+            const visibleTestimonials = getVisibleTestimonials();
+            currentIndex++;
+            if (currentIndex >= totalTestimonials / visibleTestimonials) {
+                currentIndex = 0;
+            }
+            const offset = -currentIndex * (100 / visibleTestimonials); // Adjust offset based on the number of visible testimonials
+            testimonialsContainer.style.transform = `translateX(${offset}%)`;
+            testimonialsContainer.style.transition = 'transform 1s ease'; // Smooth transition effect
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(slideTestimonials, 5000);
+
+        // Update the slide function on window resize (adjusts for responsive layouts)
+        window.addEventListener('resize', () => {
+            testimonialsContainer.style.transform = `translateX(0%)`; // Reset transform on resize
+            currentIndex = 0; // Reset index
+        });
+
+
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+   
+
+        // Toggle Mobile Menu 
+        const carousel = document.querySelector('.testimonial-carousel');
+        carousel.addEventListener('mouseover', () => {
+            carousel.style.animationPlayState = 'paused';
+        });
+        carousel.addEventListener('mouseout', () => {
+            carousel.style.animationPlayState = 'running';
+        });
+
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
